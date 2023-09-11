@@ -1,0 +1,354 @@
+
+
+.dashboard-room-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* background-color: chocolate; */
+    height: calc(100vh - 20px);
+}
+.room-dashboard-card{
+ background-color: #1c1c1c;
+ padding: 20px;
+ border-top-right-radius: 50px;
+ border-bottom-left-radius: 50px;
+ min-width: 500px;
+}
+
+/**/
+.center-content{
+    text-align: center;
+}
+/**/
+
+/*game logic*/
+.game-process-game-rounds{
+  text-align: center;
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 0 2px 7px rgb(226, 255, 5);
+  margin: 0 auto 7px auto;
+  border-radius: 10px;
+}
+.game-process-game-rounds p{  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.current-rounds-number{
+    color: rgb(226, 255, 5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.game-process-game-players{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.player-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 98px;
+}
+
+.hiding-waiting-indicator{
+    visibility: hidden;
+    height: 30px;
+}
+
+.players-current-game-result{
+   padding: 10px;
+   box-shadow: 0 2px 7px #23242a;
+}
+.score-sign{
+  margin: 0 4px;
+  font-weight: bold;
+}
+.player-score{
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.game-process-game-logic{
+  display: grid;
+  grid-template-rows:repeat(3 , 1fr);
+  grid-template-columns:repeat(3 , 1fr);
+  gap: 8px;
+}
+.xo-box{ 
+    box-shadow: 0 2px 20px #23242a;
+    height: 80px;
+    cursor: pointer;
+    font-size: 50px;
+    background-color: #1c1c1c;
+    border: none;
+    font-weight: bold;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    transition: 0.2s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: transparent;
+}
+/*end game logic*/
+
+/*-------------------------------------------------*/
+/*leave*/
+.game-process-game-leave{
+    margin-top: 15px;
+}
+/*end leave*/
+
+/*chating*/
+/*header*/
+.players-chating-header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-shadow: 0 3px 5px #23242a;
+  padding: 10px;
+  align-items: center;
+  gap: 8px;
+  border-top-right-radius: 50px;
+}
+.player-avatar-online{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.player-avatar{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}
+.player-online{
+    width: 10px;
+    height: 10px;
+    background-color: green;   
+    margin-left: -10px;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+
+/*body*/
+.players-chating-message-view{
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    background-color: #23242a;
+    width: 5px;   
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent , rgb(226, 255, 5));
+    border-radius: 50%;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent , rgb(0, 255, 255));  
+}
+.player-message{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 7px;  
+}
+.player-message-right{
+    flex-direction: row;
+}
+.player-message-left{
+    flex-direction: row-reverse;
+}
+.player-avatar-in-message{
+    width: 40px;
+    height: 40px;
+}
+.message-container-message-itself{
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 10px;
+    max-width: 300px;
+}
+.message-date{
+    opacity: 0.6;
+    margin-bottom: 3px;
+}
+.message-player-name{
+    opacity: 0.8;  
+}
+.main-palyer-message{
+    margin-top: 15px;
+}
+.guest-palyer-message{
+    margin-top: 15px;
+    text-align: right;
+}
+.message-container-message-itself-guest{
+    padding: 10px;
+    max-width: 300px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.message-background-color-x{
+   background-color: rgba(98, 229, 46,0.5); 
+}
+.message-background-color-o{
+   background-color: rgba(27, 169, 225,0.5);
+}
+/*footer*/
+.players-chating-message-input-send{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+.message-input{
+    width: 90%;
+    outline: none;
+    padding: 15px;
+    background-color: #23242a;
+    border-radius:40px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.btn-send-message{
+    width: 10%;
+    background-color: transparent;
+    color: rgb(226, 255, 5);
+    font-size: 35px;
+}
+.btn-send-message:hover{
+  background-color: transparent;
+  box-shadow: none;
+}
+/*end chating*/
+
+/*----------------------------------------------------------*/
+/*play again page*/
+.play-again-div{
+    padding: 15px;
+}
+.game-results-info{
+    padding: 10px;
+}
+.play-again-controllers{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+.icon-accept{
+    color: green;
+    font-size: 35px;
+}
+.guest-player-response-to-play-again{
+    text-align: center;
+}
+.guest-player-response-to-play-again p{
+  margin-top: -7px;
+}
+.btn-start:disabled{
+    cursor:not-allowed;
+    background-color: rgb(97, 190, 95);
+}
+.winner-loser-player-name{
+ margin-left: 5px;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ font-size: 20px;
+ font-weight: bold;
+}
+.game-results-info-details{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 0 3px 20px #23242a;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.win-lose-anounce-div{
+    text-align: center;
+}
+.player-win-message{
+    letter-spacing: 1px;
+    font-family: 'Dosis', sans-serif;
+}
+.winner-loser-tag{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.icon-trophy{
+    color: rgb(226, 255, 5);
+    width: 50px;
+}
+.icon-trophy-lose{
+    color: rgb(173, 52, 62);
+}
+.icon-trophy-draw{
+    color: green;
+}
+.player-x-color{
+   color: rgb(98, 229, 46)
+}
+.player-o-color{
+  color:rgb(27, 169, 225);
+}
+.player-x-box-shadow{
+  box-shadow: 0 2px 18px rgb(98, 229, 46);  
+}
+.player-o-box-shadow{
+    box-shadow: 0 2px 18px rgb(27, 169, 225);  
+}
+/*end play again page*/
+
+/*---------------------------------------*/
+/*change room info page*/
+.room-rounds{
+    padding: 20px;
+}
+.full-width-div{
+    width: 100%;
+}
+.controller-indicator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.select-player-main-guest-div{
+    padding: 8px;
+    font-size: 30px;
+    border-radius: 5px;
+    width: fit-content;
+    text-align: center;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+.guest-player-note-change-room-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+/*end change room info page*/
