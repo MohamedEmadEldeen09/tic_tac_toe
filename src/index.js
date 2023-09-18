@@ -10,7 +10,7 @@ import io from 'socket.io-client'
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const socket = io.connect('http://localhost:3002')
+const socket = io.connect('https://tic-tac-toe-game-server.onrender.com')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
