@@ -40,7 +40,7 @@ function CreateRoom() {
       inputType:""
     })
     
-    navigate('/online-tic-tac-toe-game/tic_tac_toe/entry/room_rounds')
+    navigate('/tic_tac_toe/entry/room_rounds')
   }
 
   return (
