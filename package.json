@@ -1,8 +1,7 @@
 {
-  "proxy":"https://tic-tac-toe-game-server.onrender.com",
+  "proxy": "https://tic-tac-toe-game-server.onrender.com",
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://MohamedEmadEldeen09.github.io/tic_tac_toe",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -23,8 +22,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
